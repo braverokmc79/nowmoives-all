@@ -9,11 +9,9 @@ import ScrollToTop from './hooks/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- 
   // <BrowserRouter basename={`${process.env.REACT_APP_API_URL=== "localhost" ? "" : "netflix"}`} >
   //   <App />
   // </BrowserRouter>
-  
   <BrowserRouter >
     <ScrollToTop/>
      <App />
