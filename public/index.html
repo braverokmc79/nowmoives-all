@@ -50,11 +50,7 @@
     <meta property="site" content="https://nowmovies.kro.kr">
     <script language="JavaScript">
       window.onload = function () {
-          document.addEventListener("contextmenu", function (e) {
-              e.preventDefault();
-          }, false);
           document.addEventListener("keydown", function (e) {
-              //document.onkeydown = function(e) {
               // "I" key
               if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
                   disabledEvent(e);
@@ -86,10 +82,10 @@
               return false;
           }
       }
-//edit: removed ";" from last "}" because of javascript error
 </script>
   </head>
-  <body>
+  <body ondragstart="return false" oncontextmenu="return false" onselectstart="return false">
+  <!-- <body> -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
