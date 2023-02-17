@@ -12,8 +12,7 @@ const NavMenu = () => {
 
     useEffect(() => {
         //console.log(" location : " , location.pathname);
-       
-
+    
         window.addEventListener("scroll", () => {
 
             if (window.scrollY > 50) {

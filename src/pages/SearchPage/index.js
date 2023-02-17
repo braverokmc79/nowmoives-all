@@ -1,6 +1,6 @@
 import axios from '../../api/axios';
 import axiosEn from '../../api/axiosEn';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useTransition } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import './SearchPage.css';
 import { useDebounce } from '../../hooks/useDebounce';
@@ -20,6 +20,7 @@ function SearchPage() {
   const [searchResults, setSearchResults] =useState([]);
   const navigate =useNavigate();
   const [loading, setLoading] = useState(true);
+  const [isPending, startTransition] = useTransition();
 
   const useQuery =()=>{
     return new URLSearchParams(useLocation().search);
@@ -38,14 +39,19 @@ function SearchPage() {
   }, [debounceTerm]);
 
 
+
   const fetchSearchMovie= async (debounceTerm)=>{
     // console.log("debounceTerm : ", debounceTerm);
      try{
-      const request = await axios.get(`/search/multi?include_adult=false&query=${debounceTerm}`);
-      setSearchResults(request.data.results);
-      setTimeout(()=>{
-        setLoading(false);
-       },1000);
+      startTransition(async ()=>{
+
+          const request = await axios.get(`/search/multi?include_adult=false&query=${debounceTerm}`);
+          setSearchResults(request.data.results);
+          setTimeout(()=>{
+            setLoading(false);
+          },1000);
+          
+      });
 
      }catch(error){
         console.log("error", error);
