@@ -52,7 +52,8 @@
   },
   "reactSnap": {
     "include": [
-      "/",
+
+      "/search",
       "/termsofService",
       "/accessBlocked",
       "/privacyPolicy",

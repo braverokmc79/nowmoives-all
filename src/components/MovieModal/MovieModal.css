@@ -61,7 +61,7 @@
     justify-content: center;
   }
   .presentation {
-    z-index: 1200;
+    z-index: 999999;
     position: absolute;
   }
   .modal-close {

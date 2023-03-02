@@ -1,20 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 //import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import ScrollToTop from './hooks/ScrollToTop';
+import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./hooks/ScrollToTop";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <BrowserRouter basename={`${process.env.REACT_APP_API_URL=== "localhost" ? "" : "netflix"}`} >
   //   <App />
   // </BrowserRouter>
-  <BrowserRouter >
-    <ScrollToTop/>
-     <App />
- </BrowserRouter>
+  <BrowserRouter>
+    <ScrollToTop />
+    <App />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
