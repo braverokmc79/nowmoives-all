@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
+#배포전 구글 Google ta 주석 처리 할것
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#
 
 ## Available Scripts
 

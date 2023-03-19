@@ -10,6 +10,7 @@
     "jsonp": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
@@ -52,13 +53,12 @@
   },
   "reactSnap": {
     "include": [
-
-      "/search",
       "/termsofService",
       "/accessBlocked",
       "/privacyPolicy",
       "/subPages/chrome",
-      "/subPages/https"
+      "/subPages/https",
+      "/search"
     ]
   }
 }
